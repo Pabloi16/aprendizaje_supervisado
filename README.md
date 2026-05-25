@@ -61,7 +61,14 @@ Ambos modelos fueron entrenados utilizando una partición de entrenamiento/prueb
 
 ## 🚀 Instrucciones de Uso
 
-### 1. Entrenamiento de Modelos
+### 1. Instalación de Dependencias
+Antes de comenzar, instala todas las dependencias (ejecución y desarrollo) ejecutando:
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+### 2. Entrenamiento de Modelos
 Puedes entrenar los modelos de dos maneras:
 * **Notebook**: Abre y ejecuta todas las celdas de [train.ipynb](file:///Users/leonelmendiola/aprendizaje_supervisado/train.ipynb).
 * **Script de Consola**: Ejecuta la automatización en terminal:
@@ -70,14 +77,14 @@ Puedes entrenar los modelos de dos maneras:
   ```
   Esto generará de nuevo los archivos `model_rf.joblib` y `model_lr.joblib` actualizados con sus respectivas métricas de precisión.
 
-### 2. Iniciar el Servidor de Producción Local
+### 3. Iniciar el Servidor de Producción Local
 Para levantar el servidor Flask local, ejecuta:
 ```bash
 python3 app.py
 ```
 El servidor cargará automáticamente los modelos y se iniciará en `http://127.0.0.1:5001`.
 
-### 3. Usar el Frontend Minimalista
+### 4. Usar el Frontend Minimalista
 Abre tu navegador e ingresa a `http://127.0.0.1:5001`. Podrás:
 * Seleccionar de forma interactiva entre el modelo **Random Forest** y **Regresión Logística**.
 * Rellenar el formulario con características personalizadas de un pasajero.
